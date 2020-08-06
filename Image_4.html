@@ -22,10 +22,6 @@ body {
   max-width: 25%;
   padding: 0 4px;;
 }
-.container {
-  position: relative;
-  width: 100%;
-}
 
 
 .img {
@@ -33,36 +29,9 @@ body {
     min-height: 200px;
     max-width: 500px;
     max-height: 500px;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #ffffff90
-  ; 
+    border: 3px solid white;
 }
 
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 /*  column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -76,6 +45,11 @@ body {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+}
+@media (hover: hover) {
+  .column img:hover {
+    border: 6px solid black;
   }
 }
 </style>
