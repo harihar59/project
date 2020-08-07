@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th  {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable td{
+    height: 200px;
+    width: 200px;
+}
+#img {
+    height: 200px;
+    width: 200px;    
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Search BITS Goa Campus Regions</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    
+  </tr>
+  <tr style="width:100px; height:100px">
+    <td ><img src="Pilani.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Pilani</td>
+  </tr>
+  <tr >
+    <td style="width:100px; height:100px"><img src="Goa_1.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Goa</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Hyderabad.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Hyderabad</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Pilani_1.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Pilani</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Pilani_2.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Pilani</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Goa_2.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Goa</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Goa_21.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Goa</td>
+  </tr>
+  <tr>
+    <td style="width:100px; height:100px"><img src="Hyderabad_1.jpg" alt="description here" /></td>
+    <td style="visibility:hidden">Hyderabad</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
