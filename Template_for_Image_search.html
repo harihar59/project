@@ -140,6 +140,11 @@ body {
                 //txtValue = td.textContent || td.innerText;
                 if (name.toUpperCase().indexOf(filter) > -1) {
                         image[i].style.display = "";
+                        if(image[i].getAttribute('data-src'))
+                        {
+                          image[i].src = image[i].dataset.src;
+                          image[i].classList.remove('lazy');
+                        }
                     } 
                 else {
                         image[i].style.display = "none";
