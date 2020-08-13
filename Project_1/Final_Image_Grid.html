@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: black;
+}
+.heading {
+
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+  background: black;
+  color: #1abc9c;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;;
+}
+
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;;
+}
+
+
+.img {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 500px;
+    max-height: 500px;
+    border: 3px solid white;
+}
+.text {
+  display: none
+}
+
+/*  column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* One Column */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media (hover: hover) {
+  .column img:hover {
+    border: 6px solid black;
+    transform: scale(1.5);
+  }
+  .heading:hover {
+    color: black;
+  }
+  #myInput:hover {
+    color: white;
+  }
+}
+</style>
+<body>
+
+<!-- Photo Grid -->
+<h1 class="heading" >Images of BITS Campus Regions</h1>
+<input type="text" id="myInput"  placeholder="Search for names.." title="Type in a name"> 
+<div class="row">
+  <div class="column">
+    <img src="Images/Pilani.jpg" name="Pxlani" style="width:100%">
+    <img src="Images/Pilani_1.jpg" name="Pilani" style="width:100%">
+    <img  src="Images/Pilani_2.jpg" name="Pilani"style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_1.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_2.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad.jpg" name="Hyderbad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_1.jpg" name="Hyderabad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_2.jpg"  name= "Hyderabad" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Images/Pilani.jpg" name="Pxlani" style="width:100%">
+    <img src="Images/Pilani_1.jpg" name="Pilani" style="width:100%">
+    <img  src="Images/Pilani_2.jpg" name="Pilani"style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_11.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_12.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_13.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_11.jpg" name="Hyderbad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_12.jpg" name="Hyderabad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_13.jpg"  name= "Hyderabad" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Images/Pilani.jpg" name="Pxlani" style="width:100%">
+    <img src="Images/Pilani_1.jpg" name="Pilani" style="width:100%">
+    <img  src="Images/Pilani_2.jpg" name="Pilani"style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_2.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_21.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa_23.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_21.jpg" name="Hyderbad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_22.jpg" name="Hyderabad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad_23.jpg"  name= "Hyderabad" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Images/Pilani.jpg" name="Pxlani" style="width:100%">
+    <img src="Images/Pilani_1.jpg" name="Pilani" style="width:100%">
+    <img  src="Images/Pilani_2.jpg" name="Pilani"style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa1.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa2.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Goa3.jpg" name="Goa" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad1.jpg" name="Hyderbad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad2.jpg" name="Hyderabad" style="width:100%">
+    <img class="lazy-load" data-src="Images/Hyderabad3.jpg"  name= "Hyderabad" style="width:100%">
+  </div>
+</div>
+<script>
+                let input = document.getElementById('myInput');
+                let timeout = null;
+                input.addEventListener('keyup', function (e) {
+                  
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function () {
+                        console.log('Input Value:', input.value);
+                        filter = input.value.toUpperCase();
+                        image = document.getElementsByTagName("img");
+      
+                        for (i = 0; i < image.length; i++) {
+                        name = image[i].getAttribute('name');
+                        if(name == null)
+                        {
+                            name = "";
+                        }
+                        console.log(name);
+                        console.log(typeof(name));
+                        if (image) {
+                            
+                            if (name.toUpperCase().indexOf(filter) > -1) {
+                                    image[i].style.display = "";
+                                    if(image[i].getAttribute('data-src'))
+                                    {
+                                    image[i].src = image[i].dataset.src;
+                                    image[i].classList.remove('lazy');
+                                    }
+                                } 
+                            else {
+                                    image[i].style.display = "none";
+                                }
+                            }
+                          }}, 1000);});
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let lazyloadImages = document.querySelectorAll("img.lazy-load");
+      let lazyloadExecutionTime;
+
+      function lazyload() {
+        if( lazyloadExecutionTime) {
+          clearTimeout( lazyloadExecutionTime);
+        }
+        lazyloadExecutionTime = setTimeout(function() {
+          let scrollTop = window.pageYOffset;
+          lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+          });
+          if(lazyloadImages.length == 0) {
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+          }
+        }, 100);
+      }
+      document.addEventListener("scroll", lazyload);
+      window.addEventListener("resize", lazyload);
+      window.addEventListener("orientationChange", lazyload);
+    });
+  </script>
+
+</body>
+</html>
